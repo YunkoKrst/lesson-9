@@ -309,7 +309,7 @@ body {
 }
 
 .content__wrapper li {
-    background: url(/img/jam_check.svg);
+    background: url(./../img/jam_check.svg);
     background-repeat: no-repeat;
     background-size: 24px;
     padding-left: 60px;
