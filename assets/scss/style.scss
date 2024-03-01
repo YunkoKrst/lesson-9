@@ -193,7 +193,7 @@
     margin: auto;
 
     figcaption {
-        animation: slideFromRight 1s forwards;
+        animation: slideFromRight 2s forwards;
 
         @keyframes slideFromRight {
             from {
@@ -247,7 +247,7 @@
 
 
 .choose__plan {
-    background-color: #F8F8F8;
+    background-color: #FFFF;
     padding-top: 80px;
     margin-top: 131px;
 
@@ -419,7 +419,7 @@
     width: 1300px;
     height: 590px;
     margin: auto;
-    
+
     &--caption {
         display: flex;
         flex-direction: column;
@@ -452,36 +452,33 @@
     &--first,
     &--second,
     &--third {
-        width: 400px;
         height: 230px;
         border: solid 2px #DDDDDD;
         position: relative;
+        padding: 30px;
+        border-radius: 10px;
+
         filter: blur(8px);
         transition: filter 0.3s ease;
 
         &:hover {
             filter: blur(0);
-          }
-    
+        }
+
     }
 
     &__wrapper {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-    }
-
-    &--avatar {
-        margin: 30px;
     }
 
     &--title {
         position: absolute;
         width: 182px;
-        height: 50px;
-        left: 65px;
-        top: 0;
-        margin: 30px;
+        height: 60px;
+        left: 100px;
+        top: 27px;
         @include text_2;
         font-size: 18px;
         line-height: 30px;
@@ -501,7 +498,7 @@
 
     &--rating {
         position: absolute;
-        right: 40px;
+        right: 57px;
         top: 0;
         margin-top: 47px;
         @include text;
@@ -511,7 +508,7 @@
 
         img {
             position: absolute;
-            left: 30px;
+            left: 33px;
             top: 5px;
         }
     }
@@ -519,20 +516,21 @@
     &--text {
         width: 340px;
         height: 100px;
-        margin: 0 30px;
         @include text;
+        margin: 20px 0 0;
         color: $dark_blue;
         font-size: 16px;
         line-height: 30px;
     }
 
     &--sliderbar {
+        margin-top: 86px;
         display: flex;
         justify-content: space-between;
-        margin-top: 82px;
     }
 
 }
+
 
 .material-symbols-outlined {
     color: $orange;
@@ -542,19 +540,34 @@
     text-align: center;
     margin-left: 20px;
 
+    transition: transform 1s ease;
+
+    &:hover {
+        transform: translateX(-20px);
+    }
+
     &--red {
         color: #ffff;
         background-color: $orange;
+
+        transition: transform 1s ease;
+
+        &:hover {
+            transform: translateX(20px);
+        }
     }
 }
 
 .subscribe {
     width: 1140px;
     height: 233px;
+    background-color: #FFFF;
     margin: auto;
-    margin-top: 65px;
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    position: relative;
+    top: 100px;
 
     &__text {
         width: 410px;
@@ -602,12 +615,22 @@
 
 
 .footer {
-    width: 1440px;
-    height: 563px;
     background-color: #F8F8F8;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    z-index: -1;
+
+    &__conteiner {
+        max-width: 100%;
+        width: 1440px;
+        height: 564px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+
 
     &__privet {
         margin: 180px 150px 230px;
@@ -655,6 +678,7 @@
         ul {
             list-style: none;
             padding: 0;
+
         }
 
         span {
@@ -667,6 +691,11 @@
 
         li {
             margin-bottom: 10px;
+
+            a {
+                text-decoration: none;
+                color: $gray;
+            }
         }
     }
 }

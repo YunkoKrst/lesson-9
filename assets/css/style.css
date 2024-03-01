@@ -49,7 +49,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   padding-right: 30px;
-  transition: transform 0.3 ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 1s ease;
 }
 .header__btn--outline:hover {
   transform: translateY(-5px);
@@ -66,7 +66,7 @@ body {
   color: #F53855;
   border: solid 1px;
   border-radius: 50px;
-  transition: transform 0.3 ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 1s ease;
 }
 .header__btn--red-border:hover {
   transform: translateY(-5px);
@@ -119,7 +119,7 @@ body {
   font-weight: 700;
   font-size: 16px;
   box-shadow: 12px #4F5665;
-  transition: transform 0.3 ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 1s ease;
 }
 .hero__btn:hover {
   transform: translateY(-5px);
@@ -184,7 +184,7 @@ body {
   margin: auto;
 }
 .posibility__figure figcaption {
-  animation: slideFromRight 1s forwards;
+  animation: slideFromRight 2s forwards;
 }
 @keyframes slideFromRight {
   from {
@@ -234,7 +234,7 @@ body {
 }
 
 .choose__plan {
-  background-color: #F8F8F8;
+  background-color: white;
   padding-top: 80px;
   margin-top: 131px;
 }
@@ -336,7 +336,7 @@ body {
   border: solid 2px #F53838;
   border-radius: 50px;
   text-decoration: none;
-  transition: transform 0.3 ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 1s ease;
 }
 .choose__plan__btn--red {
   color: white;
@@ -418,10 +418,11 @@ body {
   line-height: 30px;
 }
 .app__comments--first, .app__comments--second, .app__comments--third {
-  width: 400px;
   height: 230px;
   border: solid 2px #DDDDDD;
   position: relative;
+  padding: 30px;
+  border-radius: 10px;
   filter: blur(8px);
   transition: filter 0.3s ease;
 }
@@ -430,19 +431,15 @@ body {
 }
 .app__comments__wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-}
-.app__comments--avatar {
-  margin: 30px;
 }
 .app__comments--title {
   position: absolute;
   width: 182px;
-  height: 50px;
-  left: 65px;
-  top: 0;
-  margin: 30px;
+  height: 60px;
+  left: 100px;
+  top: 27px;
   font-family: "Rubik";
   font-weight: 500;
   font-size: 16px;
@@ -463,7 +460,7 @@ body {
 }
 .app__comments--rating {
   position: absolute;
-  right: 40px;
+  right: 57px;
   top: 0;
   margin-top: 47px;
   font-family: "Rubik";
@@ -475,24 +472,24 @@ body {
 }
 .app__comments--rating img {
   position: absolute;
-  left: 30px;
+  left: 33px;
   top: 5px;
 }
 .app__comments--text {
   width: 340px;
   height: 100px;
-  margin: 0 30px;
   font-family: "Rubik";
   font-weight: 400;
   font-size: 14px;
+  margin: 20px 0 0;
   color: #0B132A;
   font-size: 16px;
   line-height: 30px;
 }
 .app__comments--sliderbar {
+  margin-top: 86px;
   display: flex;
   justify-content: space-between;
-  margin-top: 82px;
 }
 
 .material-symbols-outlined {
@@ -502,19 +499,30 @@ body {
   padding: 15px;
   text-align: center;
   margin-left: 20px;
+  transition: transform 1s ease;
+}
+.material-symbols-outlined:hover {
+  transform: translateX(-20px);
 }
 .material-symbols-outlined--red {
   color: white;
   background-color: #F53855;
+  transition: transform 1s ease;
+}
+.material-symbols-outlined--red:hover {
+  transform: translateX(20px);
 }
 
 .subscribe {
   width: 1140px;
   height: 233px;
+  background-color: white;
   margin: auto;
-  margin-top: 65px;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  position: relative;
+  top: 100px;
 }
 .subscribe__text {
   width: 410px;
@@ -551,7 +559,7 @@ body {
   font-size: 16px;
   line-height: 25px;
   border-radius: 10px;
-  transition: transform 0.3 ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 1s ease;
 }
 .subscribe__btn:hover {
   transform: translateY(-5px);
@@ -559,9 +567,14 @@ body {
 }
 
 .footer {
-  width: 1440px;
-  height: 563px;
   background-color: #F8F8F8;
+  position: relative;
+  z-index: -1;
+}
+.footer__conteiner {
+  max-width: 100%;
+  width: 1440px;
+  height: 564px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -619,6 +632,10 @@ body {
 }
 .footer__product li, .footer__engage li, .footer__earn-money li {
   margin-bottom: 10px;
+}
+.footer__product li a, .footer__engage li a, .footer__earn-money li a {
+  text-decoration: none;
+  color: #4F5665;
 }
 
 /*# sourceMappingURL=style.css.map */
